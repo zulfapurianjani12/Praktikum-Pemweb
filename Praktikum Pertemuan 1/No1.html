@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Tugas Minggu Ini</title>
+    <script src="No1.js" defer></script> <!-- Menghubungkan antara file No1.html dengan No1.js -->
+    <style>
+        /* Mengatur gaya halaman secara umum */
+        body {
+            font-family: Arial, sans-serif;  
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; 
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  
+            flex-direction: column;
+        }
+        /* Mengatur gaya untuk judul */
+        h1 {
+            color: #4CAF50;  
+        }
+        /* Gaya untuk daftar tugas */
+        #task-list {
+            width: 80%;
+            max-width: 600px;
+            padding: 0;
+            list-style-type: none;  
+            margin: 0;
+        }
+        /* Gaya untuk setiap item tugas */
+        #task-list li {
+            background-color: #fff;  
+            border: 1px solid #ddd;  
+            margin: 5px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;  
+            align-items: center;  
+            border-radius: 4px;  
+        }
+        /* Gaya untuk item yang sudah selesai (ditandai dengan garis tengah dan warna latar belakang berbeda) */
+        #task-list li.completed {
+            background-color: #d3ffd3;  
+            text-decoration: line-through;  
+        }
+        /* Gaya untuk tombol hapus */
+        .delete-button {
+            background-color: #e74c3c;  
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 3px;  
+            cursor: pointer;
+        }
+        
+        .delete-button:hover {
+            background-color: #c0392b;  
+        }
+        /* Gaya untuk input teks */
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;  
+            max-width: 600px;
+            margin-right: 10px;
+            border: 1px solid #ddd;  
+            border-radius: 4px;  
+        }
+        /* Gaya untuk tombol tambah item */
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;  
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;  
+        }
+        /* Gaya untuk pesan error jika tidak ada input */
+        .empty-message {
+            color: red;  
+            font-size: 14px;
+            margin-top: 10px;  
+        }
+    </style>
+</head>
+<body>
+    <!-- Judul halaman -->
+    <h1>List Tugas Minggu Ini</h1>
+    <!-- Bagian input dan tombol untuk menambahkan tugas -->
+    <div style="text-align: center;">
+        <!-- Input untuk memasukkan tugas baru -->
+        <input type="text" id="new-task" placeholder="Masukkan tugas..." style="padding: 8px;">
+        <!-- Tombol untuk menambah tugas -->
+        <button id="add-task">Tambah item</button>
+    </div>
+    <!-- Daftar tugas -->
+    <ul id="task-list"></ul>
+</body>
+</html>
+
