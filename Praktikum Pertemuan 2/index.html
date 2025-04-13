@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Konten HMIF</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <img src="LogoHmif.png" alt="Logo HMIF" class="logo">
+    <h1>DAFTAR TUGAS PEMBUATAN KONTEN HMIF 2025</h1>
+    <p class="subjudul">✨ Content Planning Sosial Media HMIF 2025 ✨</p>
+
+    <form id="taskForm">
+      <input type="text" id="judul" placeholder="Judul Konten" required />
+
+      <select id="segmentasi" required>
+        <option value="">Pilih Segmentasi Konten</option>
+        <option value="GreenDay">GreenDay</option>
+        <option value="HMIFStoryline">HMIFStoryline</option>
+        <option value="ApresiasyikHMIF">ApresiasyikHMIF</option>
+        <option value="IFvent">IFvent</option>
+        <option value="TATAIN">TATAIN</option>
+        <option value="HMIFun">HMIFun</option>
+        <option value="HMIFThings">HMIFThings</option>
+      </select>
+
+      <select id="platform" required>
+        <option value="">Pilih Platform</option>
+        <option value="Feeds">Feeds</option>
+        <option value="Reels">Reels</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Reels dan TikTok">Reels dan TikTok</option>
+      </select>
+
+      <input type="date" id="tanggal" required />
+      <textarea id="deskripsi" placeholder="Deskripsi Konten"></textarea>
+      <input type="text" id="referensi" placeholder="Referensi (Link / Catatan Tambahan)" />
+      
+      <select id="status">
+        <option value="Belum Dibuat">Belum Dibuat</option>
+        <option value="Proses">Proses</option>
+        <option value="Revisi">Revisi</option>
+        <option value="Selesai Diupload">Selesai Diupload</option>
+      </select>
+
+      <button type="submit">+ Tambah Tugas</button>
+    </form>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
