@@ -1,4 +1,4 @@
-# 📚 Deskripsi plikasi Manajemen Novel Zulfa - React
+# 📚 Deskripsi Aplikasi Manajemen Novel Zulfa - React
 
 Aplikasi ini merupakan aplikasi manajemen daftar buku novel sederhana yang dibuat menggunakan React. Pengguna dapat menambahkan, mengedit, menghapus, mencari, dan memfilter buku berdasarkan status seperti "Milik", "Sedang Dibaca", dan "Ingin Dibeli". Aplikasi juga menyimpan data secara lokal di browser menggunakan localStorage. Selain itu, aplikasi juga memiliki multiple halaman yaitu ada halaman Home dan Statistik.
 
