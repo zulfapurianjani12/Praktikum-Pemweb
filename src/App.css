@@ -1,38 +1,97 @@
-.App {
+/* Container utama */
+.container {
+  background: #fdfdfd;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+h1 {
+  color: #4e73df;
+  font-size: 28px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input & select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Tombol hijau */
+button[type='submit'] {
+  background-color: #28a745;
   color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button[type='submit']:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Book list */
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.book-item {
+  background-color: #f1f5ff;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border-left: 5px solid #4e73df;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Book info */
+.book-item span {
+  flex-grow: 1;
+}
+
+/* Tombol edit & hapus */
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-left: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:first-child {
+  background-color: #ffc107; /* kuning (edit) */
+}
+
+.actions button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.actions button:last-child {
+  background-color: #dc3545; /* merah (hapus) */
+}
+
+.actions button:last-child:hover {
+  background-color: #c82333;
 }
