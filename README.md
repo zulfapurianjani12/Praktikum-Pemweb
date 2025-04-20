@@ -62,11 +62,11 @@ b. useLocalStorage: menyimpan dan mengambil data dari localStorage dengan mudah.
 
 1- Halaman Home
 Menampilkan form, daftar buku, filter, dan pencarian.
-<img src="./screenshots/HomePage.png" />
+<img src="./screenshots/HomePage.png">
 
 2- Halaman Statistik
 Menampilkan ringkasan jumlah buku.
-<img src="./screenshots/statpage.png" />
+<img src="./screenshots/Statpage.png">
 
 # 🚫 Testing
 
