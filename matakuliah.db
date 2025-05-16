@@ -1,0 +1,16 @@
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class Matakuliah(Base):
+    __tablename__ = "matakuliah"
+    
+    id = Column(Integer, primary_key=True, index=True)  # ID matakuliah
+    kode_mk = Column(String, unique=True, index=True)  # Kode matakuliah
+    nama_mk = Column(String)  # Nama matakuliah
+    sks = Column(Integer)  # SKS
+    semester = Column(String)  # Semester matakuliah
+
+    def __repr__(self):
+        return f"<Matakuliah(id={self.id}, kode_mk={self.kode_mk}, nama_mk={self.nama_mk}, sks={self.sks}, semester={self.semester})>"
