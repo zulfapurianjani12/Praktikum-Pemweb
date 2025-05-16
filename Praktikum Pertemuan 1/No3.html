@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <script src="No3.js" defer></script> <!--Menghubungkan antara file No3.js dan No3.html-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px; /* Lebar lebih besar */
+            box-sizing: border-box; /* Menyesuaikan ukuran dengan padding */
+            text-align: left;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 15px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            box-sizing: border-box; /* Menjamin input tidak terpotong */
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        span {
+            display: block;
+            margin-top: -10px;
+            font-size: 12px;
+        }
+
+        #nameError, #emailError, #passwordError {
+            color: red;
+        }
+
+        #successMessage {
+            color: green;
+            font-size: 16px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Formulir Pendaftaran</h2>
+        <form id="registrationForm" onsubmit="return validateForm(event)">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" style="display: none;">Nama harus lebih dari 3 karakter</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" style="display: none;">Email tidak valid</span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" style="display: none;">Password harus minimal 8 karakter</span>
+
+            <button type="submit">Daftar</button>
+        </form>
+
+        <!-- Menambahkan elemen untuk menampilkan pesan setelah validasi berhasil -->
+        <div id="successMessage" style="display: none;">Form anda telah tervalidasi</div>
+    </div>
+</body>
+</html>
